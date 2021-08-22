@@ -1,3 +1,10 @@
+# QM variant
+
+- Fixed Dockerfile to build according to current arch (removed fixating the arch to amd64).
+- Added "docker-multiarch" make target to build and push a multi-arch image for amd64 and arm64.
+
+Run `make docker-multiarch` to execute
+
 # gRPCurl
 [![Build Status](https://circleci.com/gh/fullstorydev/grpcurl/tree/master.svg?style=svg)](https://circleci.com/gh/fullstorydev/grpcurl/tree/master)
 [![Go Report Card](https://goreportcard.com/badge/github.com/fullstorydev/grpcurl)](https://goreportcard.com/report/github.com/fullstorydev/grpcurl)

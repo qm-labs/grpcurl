@@ -17,7 +17,7 @@ RUN go build -o /grpcurl \
     ./cmd/grpcurl
 
 # New FROM so we have a nice'n'tiny image
-FROM scratch
+FROM alpine
 WORKDIR /
 COPY --from=builder /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/ca-certificates.crt
 COPY --from=builder /etc/passwd /etc/passwd

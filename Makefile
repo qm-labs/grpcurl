@@ -31,6 +31,11 @@ docker:
 	docker build -t fullstorydev/grpcurl:$(dev_build_version) .
 	@rm VERSION
 
+.PHONY: docker-multiarch
+docker-multiarch:
+	@echo $(dev_build_version) > VERSION
+	docker buildx build --platform linux/arm64/v8,linux/amd64 --output type=registry -t qmachines/grpcurl:$(dev_build_version) .
+	@rm VERSION
 .PHONY: checkgofmt
 checkgofmt:
 	gofmt -s -l .
