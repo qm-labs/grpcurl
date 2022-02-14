@@ -34,7 +34,7 @@ docker:
 .PHONY: docker-multiarch
 docker-multiarch:
 	@echo $(dev_build_version) > VERSION
-	docker buildx build --platform linux/arm64/v8,linux/amd64 --output type=registry -t qmachines/grpcurl:$(dev_build_version) .
+	docker buildx build --platform linux/arm64/v8,linux/amd64,linux/arm/v7 --output type=registry -t qmachines/grpcurl:$(dev_build_version) .
 	@rm VERSION
 .PHONY: checkgofmt
 checkgofmt:
