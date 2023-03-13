@@ -5,7 +5,7 @@ go 1.15
 require (
 	cloud.google.com/go v0.56.0 // indirect
 	github.com/davecgh/go-spew v1.1.1 // indirect
-	github.com/golang/protobuf v1.5.2
+	github.com/golang/protobuf v1.5.3
 	github.com/jhump/protoreflect v1.10.3
 	golang.org/x/text v0.3.7 // indirect
 	google.golang.org/grpc v1.44.0
